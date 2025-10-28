@@ -13,13 +13,15 @@ import reactor.core.publisher.Mono;
 
 @Component
 public class CustomPostFilter implements GlobalFilter, Ordered {
-	private static final Logger logger = Logger.getLogger(CustomPreFilter.class.getName());
+	private static final Logger logger = Logger.getLogger(CustomPostFilter.class.getName());
 
 	@Override
-	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-		return chain.filter(exchange).then(Mono.fromRunnable(()->{
+	public Mono<Void> filter(ServerWebExchange exchange,
+		org.springframework.cloud.gateway.filter.GatewayFilterChain chain) {
+		return chain.filter(exchange).then(Mono.fromRunnable(() -> {
 			ServerHttpResponse response = exchange.getResponse();
 			logger.info("Post Filter: Response status code is " + response.getStatusCode());
+			// Add any custom logic here
 		}));
 	}
 
