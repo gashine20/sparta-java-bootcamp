@@ -65,7 +65,7 @@ public class ProductController {
 		productService.deleteProduct(productId, deletedBy);
 	}
 
-	@GetMapping("/{id}/reduceQuantity")
+	@GetMapping("/{productId}/reduceQuantity")
 	public void reduceProductQuantity(@PathVariable Long productId, @RequestParam int quantity) {
 		productService.reduceProductQuantity(productId, quantity);
 	}
