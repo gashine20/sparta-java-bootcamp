@@ -1,4 +1,4 @@
-package com.example.locking;
+package com.example.locking.Item;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
