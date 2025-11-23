@@ -1,4 +1,4 @@
-package com.example.locking.Item;
+package com.example.locking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

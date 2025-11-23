@@ -1,4 +1,4 @@
-package com.example.locking.Item;
+package com.example.locking.item;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

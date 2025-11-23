@@ -1,4 +1,4 @@
-package com.example.locking.Item;
+package com.example.locking.item;
 
 import jakarta.persistence.LockModeType;
 import org.springframework.data.jpa.repository.JpaRepository;
